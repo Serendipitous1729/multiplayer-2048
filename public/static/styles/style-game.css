@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#body-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#heading-container {
+    text-align: center;
+}
+#heading-container h3{
+    font-weight: lighter;
+}
+#heading-container h3 span{
+    font-weight: bold;
+}
+
+#timer-container {
+    min-height: 100px;
+    max-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#timer {
+    font-size: 3rem;
+    width: max-content;
+    text-align: center;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+#game-container {
+    margin: 20px;
+    display: flex;
+    max-height: calc(100vh - 150px);
+    padding-bottom: 20px;
+}
+
+.board-container {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.score {
+    text-align: center;
+    margin: 3px;
+    padding: 3px;
+}
+
+.increased-score{
+    z-index: 2;
+    position: absolute;
+    transition: transform 250ms ease-out;
+}
+
+.score-value {
+    transition: transform 100ms;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.board-2048 {
+    background-color: #bbada0;
+    aspect-ratio: 1;
+    max-height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 2%;
+    padding: 1%;
+    border-radius: 3px;
+}
+
+.cell-2048 {
+    border-radius: 3px;
+    background-color: #ccc0b3;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.tile {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.tile span{
+    width: 100%;
+    text-align: center;
+    font-size: 3.5vmax;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.animated-tile{
+    transition: transform 100ms;
+}

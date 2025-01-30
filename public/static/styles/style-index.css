@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#headings {
+    text-align: center;
+}
+
+#username-container {
+    width: 100%;
+    display: flex;
+}
+
+#username {
+    flex-basis: calc(50% - 20px);
+    margin-left: auto;
+    outline: none;
+    height: 20px;
+}
+
+#join-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+#join-public, #join-private {
+    flex-basis: 50%;
+    border-radius: 10px;
+    padding: 20px 50px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-heading {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.join-heading-spacer {
+    flex-grow: 1;
+}
+
+.join-btn {
+    padding: 10px;
+    width: fit-content;
+    border: #EEE4DA 3px solid;
+    border-radius: 10px;
+    background-color: #EDC850;
+    cursor: pointer;
+    transition: transform 200ms;
+}
+
+.join-btn:hover {
+    transform: scale(1.1);
+}
+
+.join-btn:active {
+    background-color: #EDC22E;
+}

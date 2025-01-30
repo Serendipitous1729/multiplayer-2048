@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style-game.css">
+    <title>multiplayer 2048</title>
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="heading-container">
+            <h1>Highest score after 5 minutes wins!</h1>
+            <h3>Playing match against <span id="opponent-name">[loading oppenent username...]</span></h3>
+        </div>
+        <div id="timer-and-game-sizer">
+            <div id="timer-container">Initializing...</div>
+            <div id="game-container">
+                <div class="board-container">
+                    <div class="score" id="player-score">Your board</div>
+                    <div class="board-2048" id="player-board"></div>
+                </div>
+                <div class="board-container">
+                    <div class="score" id="opponent-score">Opponent's board</div>
+                    <div class="board-2048" id="opponent-board"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/socket.io.min.js"></script>
+    <script src="./scripts/game.js"></script>
+</body>
+
+</html>

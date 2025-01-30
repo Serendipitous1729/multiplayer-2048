@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplayer 2048</title>
+    <link rel="stylesheet" href="./styles/style-index.css">
+</head>
+<body>
+    <div id="headings">
+        <h1>Multiplayer 2048</h1>
+        <p>It's like 2048, except there's two people, and the highest score after 5 minutes wins!</p>
+    </div>
+    <div id="username-container">
+        <span id="username-msg">Your username (display name):</span>
+        <input type="text" id="username" placeholder="Set your username">
+    </div>
+    <div id="join-container">
+        <div id="join-public">
+            <p class="join-heading">PUBLIC LOBBIES</p>
+            <div class="join-heading-spacer"></div>
+            <button id="public-btn" class="join-btn">Join any open public lobby!</button>
+            <div class="join-heading-spacer"></div>
+        </div>
+        <div id="join-private">
+            <p class="join-heading">PRIVATE LOBBIES</p>
+            <div class="join-heading-spacer"></div>
+            <button id="private-btn" class="join-btn">Start a new private game!</button>
+            <p>To join a private game, ask the host for the URL of their game!</p>
+        </div>
+    </div>
+    <script src="./scripts/socket.io.min.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

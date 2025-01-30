@@ -1,0 +1,24 @@
+{
+  "name": "multiplayer-2048",
+  "version": "1.0.0",
+  "description": "2048, but with friends!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serendipitous1729/multiplayer-2048.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serendipitous1729/multiplayer-2048/issues"
+  },
+  "homepage": "https://github.com/Serendipitous1729/multiplayer-2048#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "seedrandom": "^3.0.5",
+    "socket.io": "^4.8.1"
+  }
+}
