@@ -31,6 +31,7 @@ let privateUnfullMatches = {};
 
 app.get("/", (req, res) => {
     res.sendFile(NODE_PATH.join(__dirname, "public", "index.html"));
+    console.log("test-1");
 });
 
 app.get("/create-private-match", (req, res) => {
