@@ -5,17 +5,6 @@ const NODE_PATH = require("node:path");
 const SEEDRANDOM = require("seedrandom");
 const Match = require("./Match");
 
-function generateRandomString(len) {
-    let str = "";
-    let lookup = "01234567890abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for (let i = 0; i < len; i++) {
-        str += lookup[Math.floor(Math.random() * lookup.length)];
-    }
-    return str;
-}
-const serverRNG = new SEEDRANDOM(generateRandomString(16));
-
-
 const app = express();
 const server = NODE_HTTP.createServer(app);
 const io = new SOCKETIO.Server(server);
@@ -31,7 +20,6 @@ let privateUnfullMatches = {};
 
 app.get("/", (req, res) => {
     res.sendFile(NODE_PATH.join(__dirname, "public", "index.html"));
-    console.log("test-1");
 });
 
 app.get("/create-private-match", (req, res) => {
@@ -56,7 +44,7 @@ io.on("connect", (socket) => {
     socket.on("join-lobby-updates", () => {
         socket.join("lobby-updates");
         socket.emit("lobby-update", getLobbyUpdateData());
-    })
+    });
     socket.on("join-lobby", (username, lobby) => {
         // add player to a match and getting some stuff
         let match, player;

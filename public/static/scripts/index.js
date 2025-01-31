@@ -27,7 +27,7 @@ function updateUsernameLocalStorage() {
 function validateUsername(username) {
     let msg = "Your username (display name):";
     let isValid = true;
-    if(username.trim() === "" || username === null) {
+    if(username === null || username.trim() === "") {
         msg = "Please enter a username:";
         isValid = false;
     }
@@ -44,9 +44,17 @@ function validateUsername(username) {
 }
 
 document.getElementById("public-btn").addEventListener("click", () => {
-    window.location.href = "/match";
+    if(validateUsername(localStorage.getItem("username"))){
+        window.location.href = "/match";
+    } else {
+        alert("Please set a valid username!");
+    }
 });
 
 document.getElementById("private-btn").addEventListener("click", () => {
-    window.location.href = "/create-private-match";
+    if(validateUsername(localStorage.getItem("username"))){
+        window.location.href = "/create-private-match";
+    } else {
+        alert("Please set a valid username!");
+    }
 });
