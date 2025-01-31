@@ -18,15 +18,7 @@ const serverRNG = new SEEDRANDOM(generateRandomString(16));
 
 const app = express();
 const server = NODE_HTTP.createServer(app);
-const io = SOCKETIO(server, {
-    cors: {
-        origin: "http://localhost:3000",
-        methods: ["GET", "POST"],
-        transports: ['websocket', 'polling'],
-        credentials: true
-    },
-    allowEIO3: true
-});
+const io = new SOCKETIO.Server(server);
 
 app.use(express.static(NODE_PATH.join(__dirname, "public", "static")));
 app.use("/match", express.static(NODE_PATH.join(__dirname, "public", "static")));
