@@ -7,7 +7,7 @@ URL: https://multiplayer-2048.onrender.com/
 Because I've hosted this on Render's free tier, there's a high likelihood that they've "spun down" the site due to inactivity. So if the site seems to not be loading, don't worry, it'll take about a minute to come online - sorry!
 
 ## How to play
-You can play a public game (with a random other guy) or a private game (only people with the link can join).
+You can play a public game (with a random other player) or a private game (only people with the link can join).
 ### Public games:
 On the home page (https://multiplayer-2048.onrender.com/), click the "Join any open public lobby" button! Then, it'll redirect you to a game. It's that simple!
 ### Private games:
